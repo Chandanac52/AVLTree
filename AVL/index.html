@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVL Tree Visualization</title>
+  <style>
+    /* Style to align the input fields and buttons horizontally */
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .controls input,
+    .controls button {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    #output {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>AVL Tree</h1>
+
+  <!-- Canvas for drawing the AVL tree -->
+  <canvas id="canvas" width="800" height="600"></canvas>
+
+  <!-- Controls for insertion, deletion, and finding -->
+  <div class="controls">
+    <input type="number" id="nodeValue" placeholder="Enter a value">
+    <button onclick="addValue()">Add Value</button>
+    <input type="number" id="deleteValue" placeholder="Enter value to delete">
+    <button onclick="deleteValue()">Delete Value</button>
+    <input type="number" id="findValue" placeholder="Enter value to find">
+    <button onclick="findValue()">Find Value</button>
+    <button onclick="printTraversal()">Print Traversal</button>
+  </div>
+
+  <!-- Output for the traversal print -->
+  <div id="output"></div>
+
+  <script src="avltree.js"></script>
+</body>
+
+</html>
